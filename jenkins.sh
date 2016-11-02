@@ -1,6 +1,9 @@
 #!/bin/sh
 
-if [ $1 = "make" ]
+if [$1 -z ]
+then
+    echo "Usage is $0 <make,clean,cmake-clean>"
+elif [ $1 = "make" ]
 then
 
     echo "Building make files";
