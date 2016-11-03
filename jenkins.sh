@@ -30,5 +30,3 @@ then
 else
     echo "no option like $1";
 fi
-
-#test commit
