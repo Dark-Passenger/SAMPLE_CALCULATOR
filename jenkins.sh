@@ -1,8 +1,8 @@
 #!/bin/sh
 
-if [$1 -z ]
+if [ -z $1 ]
 then
-    echo "Usage is $0 <make,clean,cmake-clean>"
+    echo "Usage is $0 <make/clean/cmake-clean>"
 elif [ $1 = "make" ]
 then
 
