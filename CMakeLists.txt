@@ -5,8 +5,8 @@ cmake_minimum_required(VERSION 2.8)
 
 project ("Sample Calculator")
 
-add_definitions(-Weverything -std=c++14)
-add_definitions(-Wno-global-constructors -Wno-weak-vtables -Wno-padded -Wno-c++98-compat -Wno-exit-time-destructors -std=c++1y)
+add_definitions(-Weverything -std=c++1y)
+add_definitions(-Wno-global-constructors -Wno-weak-vtables -Wno-padded -Wno-c++98-compat -Wno-exit-time-destructors)
 
 set (CMAKE_RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/output")
 set (CMAKE_LIBRARY_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/output")
