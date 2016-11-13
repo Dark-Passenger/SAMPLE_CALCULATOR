@@ -6,7 +6,7 @@ int main()
   sharedclass libshare;     //object of the shared library class.
   int a, b = 0;
   int choice;
-  int result;
+
   std::cout << "Enter first number : ";
   std::cin >> a;
   std::cout << "Enter second number : ";
@@ -26,20 +26,16 @@ int main()
     switch(choice)
         {
           case 1 :
-                result = libshare.add(a,b);
-                std::cout << "Result is : " << result << std::endl;
+                std::cout << "Result is : " << libshare.add(a,b) << std::endl;
                 break;
           case 2 :
-                result = libshare.subtract(a,b);
-                std::cout << "Result is : " << result << std::endl;
+                std::cout << "Result is : " << libshare.subtract(a,b) << std::endl;
                 break;
           case 3 :
-                result = libshare.multiply(a,b);
-                std::cout << "Result is : " << result << std::endl;
+                std::cout << "Result is : " << libshare.multiply(a,b) << std::endl;
                 break;
           case 4 :
-                result = libshare.divide(a,b);
-                std::cout << "Result is : " << result << std::endl;
+                std::cout << "Result is : " << libshare.divide(a,b) << std::endl;
                 break;
           case 5 :
                 break;
