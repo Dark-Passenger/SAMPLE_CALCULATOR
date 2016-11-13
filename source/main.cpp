@@ -1,61 +1,55 @@
 #include <iostream>
-#include "shared.h"		//we include the class that is compiled into the shared library.
-
-using namespace std;
+#include "../include/shared.h"     //we include the class that is compiled into the shared library.
 
 int main()
 {
-  sharedclass libshare;		//object of the shared library class.
-  int a = 0;
-  int b = 0;
+  sharedclass libshare;     //object of the shared library class.
+  int a, b = 0;
   int choice;
   int result;
-  bool flag = false;
-
-  cout<<"Enter first number : ";
-  cin>>a;
-  cout<<"Enter second number : ";
-  cin>>b;
+  std::cout << "Enter first number : ";
+  std::cin >> a;
+  std::cout << "Enter second number : ";
+  std::cin >> b;
 
   do
   {
 
-    cout<<"1. Addition\n";
-    cout<<"2. Subtraction\n";
-    cout<<"3. Multiplication\n";
-    cout<<"4. Division\n";
-    cout<<"5. Exit\n";
-    cout<<"Enter selection : ";
-    cin>>choice;
+    std::cout << "1. Addition" << std::endl;
+    std::cout << "2. Subtraction" << std::endl;
+    std::cout << "3. Multiplication" << std::endl;
+    std::cout << "4. Division" << std::endl;
+    std::cout << "5. Exit" << std::endl;
+    std::cout << "Enter selection : ";
+    std::cin  >>  choice;
 
     switch(choice)
         {
           case 1 :
                 result = libshare.add(a,b);
+                std::cout << "Result is : " << result << std::endl;
                 break;
           case 2 :
                 result = libshare.subtract(a,b);
+                std::cout << "Result is : " << result << std::endl;
                 break;
           case 3 :
                 result = libshare.multiply(a,b);
+                std::cout << "Result is : " << result << std::endl;
                 break;
           case 4 :
                 result = libshare.divide(a,b);
+                std::cout << "Result is : " << result << std::endl;
                 break;
           case 5 :
-                flag = true;
                 break;
 
           default :
-                cout<<"Wrong choice try again";
-                result = 0;
+                std::cout << "Wrong choice try again" << std::endl;
         }
 
-    if(flag==false)	//this is so that when user exits the result of any previous operations is not shown.
-    {
-        cout<<"Result is : "<<result<< "\n";
-    }
+  } while(choice != 5);
 
-  }while((flag == false) && (choice < 5));	//we check for the exit flag and also if the user has chosen to exit.
+  return 0;
 
 }

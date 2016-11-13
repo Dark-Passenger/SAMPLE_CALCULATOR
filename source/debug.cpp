@@ -7,6 +7,10 @@ Debug::Debug()
 {
 }
 
+Debug::~Debug()
+{
+}
+
 Debug& Debug::instance()
 {
     static Debug d;

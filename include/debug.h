@@ -5,6 +5,7 @@ class Debug
     private:
         std::map<std::string,int> table;
         Debug();
+        ~Debug();
         Debug(Debug&&) = delete;                    //disable copy constructor
         Debug(const Debug&) = delete;               //disable copy constructor
         Debug& operator=(Debug&&) = delete;         //disable assigment constructor
