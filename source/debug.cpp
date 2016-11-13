@@ -1,6 +1,6 @@
 #include <string>
 #include <map>
-#include "debug.h"
+#include "../include/debug.h"
 
 //private constructor so object can be accessed only from instance()
 Debug::Debug()

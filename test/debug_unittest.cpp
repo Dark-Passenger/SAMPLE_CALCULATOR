@@ -1,5 +1,5 @@
 #include <gtest/gtest.h>
-#include "debug.h"
+#include "../include/debug.h"
 
 class DebugTest : public ::testing::Test
 {

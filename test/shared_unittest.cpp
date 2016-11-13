@@ -1,5 +1,5 @@
 #include <gtest/gtest.h>
-#include "shared.h"
+#include "../include/shared.h"
 
 class SharedTest : public ::testing::Test
 {
